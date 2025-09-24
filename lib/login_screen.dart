@@ -55,6 +55,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final contentWidth = screenWidth > 370 ? 354.0 : screenWidth * 0.95;
+    final smallContentWidth = screenWidth > 270 ? 256.0 : screenWidth * 0.7;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -65,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 SizedBox(height: 32),
                 Container(
-                  width: 354,
+                  width: contentWidth,
                   height: 180,
                   child: Lottie.asset(
                     'assets/Artboard_1.json',
@@ -93,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Center(
                     child: Image.asset(
-                      'assets/shartflix_logo.png', // Yeni logo
+                      'assets/shartflix_logo.png',
                       width: 52,
                       height: 44,
                     ),
@@ -101,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 24),
                 Container(
-                  width: 256,
+                  width: smallContentWidth,
                   child: Column(
                     children: [
                       Text(
@@ -124,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
                           height: 17 / 14,
-                          color: Colors.white.withAlpha(230), // 0.9*255
+                          color: Colors.white.withAlpha(230),
                         ),
                       ),
                     ],
@@ -132,17 +135,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 36),
                 Container(
-                  width: 354,
+                  width: contentWidth,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       // E-posta input
                       Container(
-                        width: 354,
+                        width: contentWidth,
                         height: 56,
                         decoration: BoxDecoration(
-                          color: Colors.white.withAlpha(13), // 0.05*255
-                          border: Border.all(color: Colors.white.withAlpha(51)), // 0.2*255
+                          color: Colors.white.withAlpha(13),
+                          border: Border.all(color: Colors.white.withAlpha(51)),
                           borderRadius: BorderRadius.circular(18),
                         ),
                         child: Row(
@@ -179,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(height: 24),
                       // Şifre input
                       Container(
-                        width: 354,
+                        width: contentWidth,
                         height: 56,
                         decoration: BoxDecoration(
                           color: Colors.white.withAlpha(13),
@@ -256,7 +259,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: _isLoading ? null : _login,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFE50914),
-                          minimumSize: const Size(354, 56),
+                          minimumSize: Size(contentWidth, 56),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),
@@ -283,7 +286,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 24),
                 // Sosyal medya butonları
                 Container(
-                  width: 210,
+                  width: contentWidth * 0.6,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -298,7 +301,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 24),
                 // Kayıt Ol linki
                 Container(
-                  width: 188,
+                  width: contentWidth * 0.53,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -308,7 +311,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontFamily: 'Instrument Sans',
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
-                          color: Colors.white.withAlpha(204), // 0.8*255
+                          color: Colors.white.withAlpha(204),
                         ),
                       ),
                       TextButton(
