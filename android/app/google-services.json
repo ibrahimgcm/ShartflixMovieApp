@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453692065073",
+    "project_id": "shartflix-1a7a0",
+    "storage_bucket": "shartflix-1a7a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453692065073:android:b07373a2edb462394d5c10",
+        "android_client_info": {
+          "package_name": "com.example.shartflixmovieapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT7fSBEZFOlnS0ejVGIHcbLWsjfI_4UO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
